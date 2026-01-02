@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homestead PvE | Elite DayZ Experience</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap');
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary-red: #ff2d2d;
+      --secondary-red: #cc1f1f;
+      --accent-orange: #ff6b35;
+      --dark-bg: #0c0c0c;
+      --darker-bg: #080808;
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+    }
+    
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: var(--dark-bg);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    
+    /* Animated Background Particles */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: var(--primary-red);
+      border-radius: 50%;
+      animation: float 20s infinite linear;
+      opacity: 0.6;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(100vh) translateX(0px); opacity: 0; }
+      10% { opacity: 0.6; }
+      90% { opacity: 0.6; }
+      100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+    }
+    
+    /* Navigation */
+    .navbar-custom {
+      background: rgba(12, 12, 12, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      transition: all 0.3s ease;
+    }
+    
+    .navbar-brand {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: 1.8rem;
+      color: var(--primary-red) !important;
+      text-shadow: 0 0 20px rgba(255, 45, 45, 0.5);
+    }
+    
+    .nav-link {
+      color: #ffffff !important;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary-red) !important;
+      text-shadow: 0 0 10px rgba(255, 45, 45, 0.7);
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(45deg, #0c0c0c 0%, #1a1a1a 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://homestead.online/images/ss1.png') center center/cover no-repeat;
+      opacity: 0.4;
+      z-index: -1;
+    }
+    
+    .hero-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(255, 45, 45, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 45, 45, 0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: gridMove 20s linear infinite;
+      z-index: 1;
+    }
+    
+    @keyframes gridMove {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      animation: heroFloat 3s ease-in-out infinite alternate;
+    }
+    
+    @keyframes heroFloat {
+      from { transform: translateY(0px); }
+      to { transform: translateY(-10px); }
+    }
+    
+    .hero h1 {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: clamp(3rem, 8vw, 6rem);
+      background: linear-gradient(45deg, var(--primary-red), var(--accent-orange), #ffffff);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 3s ease-in-out infinite;
+      text-shadow: 0 0 50px rgba(255, 45, 45, 0.8);
+      margin-bottom: 1rem;
+    }
+    
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    
+    .hero .lead {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    
+    /* Enhanced Buttons */
+    .btn-primary-custom {
+      background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
+      border: none;
+      padding: 15px 35px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(255, 45, 45, 0.4);
+    }
+    
+    .btn-primary-custom:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(255, 45, 45, 0.6);
+      background: linear-gradient(135deg, var(--accent-orange), var(--primary-red));
+    }
+    
+    .btn-outline-custom {
+      border: 2px solid var(--primary-red);
+      color: var(--primary-red);
+      padding: 13px 35px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: transparent;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-outline-custom:hover {
+      background: var(--primary-red);
+      color: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(255, 45, 45, 0.4);
+    }
+    
+    /* Glass Cards */
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .glass-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .glass-card:hover::before {
+      left: 100%;
+    }
+    
+    .glass-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(255, 45, 45, 0.2);
+      border-color: rgba(255, 45, 45, 0.3);
+    }
+    
+    /* Server Stats */
+    .server-stats {
+      background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+      padding: 80px 0;
+      position: relative;
+    }
+    
+    .stat-item {
+      text-align: center;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .stat-number {
+      font-family: 'Orbitron', monospace;
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--primary-red);
+      text-shadow: 0 0 20px rgba(255, 45, 45, 0.6);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    
+    .stat-label {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #cccccc;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    /* Features Section */
+    .features {
+      padding: 100px 0;
+      background: var(--dark-bg);
+    }
+    
+    .feature-icon {
+      font-size: 4rem;
+      color: var(--primary-red);
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 30px rgba(255, 45, 45, 0.6);
+      transition: all 0.3s ease;
+    }
+    
+    .glass-card:hover .feature-icon {
+      transform: scale(1.1);
+      text-shadow: 0 0 40px rgba(255, 45, 45, 0.8);
+    }
+    
+    /* Section Headings */
+    .section-heading {
+      font-family: 'Orbitron', monospace;
+      font-weight: 900;
+      font-size: 3.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      background: linear-gradient(45deg, #ffffff, var(--primary-red));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 30px rgba(255, 45, 45, 0.5);
+    }
+    
+    /* Enhanced Footer */
+    .footer {
+      background: linear-gradient(135deg, var(--darker-bg), #000000);
+      padding: 60px 0 30px;
+      border-top: 1px solid var(--glass-border);
+      position: relative;
+    }
+    
+    .footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary-red), transparent);
+    }
+    
+    .social-links a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 48px;
+      margin: 0 10px;
+      color: #ffffff;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background: var(--primary-red);
+      color: #ffffff;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(255, 45, 45, 0.4);
+    }
+    
+    /* Scroll Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Mobile Optimizations */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+      
+      .section-heading {
+        font-size: 2.5rem;
+      }
+      
+      .btn-primary-custom,
+      .btn-outline-custom {
+        padding: 12px 25px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Background Particles -->
+  <div class="particles" id="particles"></div>
+  
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fas fa-crosshairs me-2"></i>HOMESTEAD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stats">Stats</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#join">Join Now</a></li>
+	  <li class="nav-item"><a class="nav-link" href="#maps">Maps</a></li>
+	  <li class="nav-item"><a class="nav-link" href="/guides/">Guides</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <h1>HOMESTEAD PvE</h1>
+      <p class="lead">Survive • Build • Dominate</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <a href="steam://connect/129.146.31.206:2302" class="btn btn-primary-custom">
+          <i class="fas fa-play me-2"></i>Join Server
+        </a>
+        <a href="https://discord.gg/6xhGgwRBJb" target="_blank" class="btn btn-outline-custom">
+          <i class="fab fa-discord me-2"></i>Discord
+        </a>
+      </div>
+      <div class="mt-4">
+        <p class="mb-1"><strong>IP:</strong> 129.146.31.206:2302</p>
+        <p class="mb-0"><i class="fas fa-circle text-success me-2"></i>Server Online</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Server Stats -->
+  <section id="stats" class="server-stats">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 fade-in">
+          <div class="stat-item">
+            <span class="stat-number" id="playerCount">∞</span>
+            <div class="stat-label">Online Players</div>
+          </div>
+        </div>
+        <div class="col-md-3 fade-in">
+          <div class="stat-item">
+            <span class="stat-number">60</span>
+            <div class="stat-label">Max Players</div>
+          </div>
+        </div>
+        <div class="col-md-3 fade-in">
+          <div class="stat-item">
+            <span class="stat-number">99.8%</span>
+            <div class="stat-label">Uptime</div>
+          </div>
+        </div>
+        <div class="col-md-3 fade-in">
+          <div class="stat-item">
+            <span class="stat-number">15ms</span>
+            <div class="stat-label">Avg Ping</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-heading fade-in">Elite Features</h2>
+      
+      <!-- Trader Showcase -->
+      <div class="row mb-5">
+        <div class="col-12 fade-in">
+          <div class="glass-card">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <img src="./images/ss1.png" alt="Homestead Trader Base" class="img-fluid rounded" style="box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+              </div>
+              <div class="col-lg-6 ps-lg-4 mt-4 mt-lg-0">
+                <h3 class="mb-3" style="color: var(--primary-red); font-family: 'Orbitron', monospace; font-weight: 700;">
+                  <i class="fas fa-store me-2"></i>Elite Trader Complex
+                </h3>
+                <p class="mb-3">Experience our fully custom-built trader base featuring multiple hangars, secure trading zones, and helicopter landing pads. This isn't just a trader - it's a complete survivor hub.</p>
+                <div class="row g-3">
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      <span>Safe Trading Zone</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      <span>Helicopter Access</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      <span>Get Geared</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-check-circle text-success me-2"></i>
+                      <span>Vehicle Spawns</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="glass-card h-100 text-center">
+            <i class="fas fa-shield-alt feature-icon"></i>
+            <h4 class="mb-3">Safe PvE Environment</h4>
+            <p>Experience DayZ without the stress of PvP. Focus on survival, exploration, and community building in our protected environment.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="glass-card h-100 text-center">
+            <i class="fas fa-hammer feature-icon"></i>
+            <h4 class="mb-3">Advanced Base Building</h4>
+            <p>Construct elaborate bases with expanded building options, community areas, and creative building mechanics.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="glass-card h-100 text-center">
+            <i class="fas fa-helicopter feature-icon"></i>
+            <h4 class="mb-3">Helicopters & Vehicles</h4>
+            <p>Take to the skies with helicopters and explore Banov with an expanded vehicle lineup.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="glass-card h-100 text-center">
+            <i class="fas fa-store feature-icon"></i>
+            <h4 class="mb-3">Epic Trader Hub</h4>
+            <p>Visit our massive custom-built trader complex with hangars, safe zones, and helicopter access. Trade safely in style!</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="glass-card h-100 text-center">
+            <i class="fas fa-calendar-alt feature-icon"></i>
+            <h4 class="mb-3">Dynamic Events</h4>
+            <p>Participate in server-wide events, helicopter crashes, and AI-driven encounters that keep gameplay fresh.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="glass-card h-100 text-center">
+            <i class="fas fa-cogs feature-icon"></i>
+            <h4 class="mb-3">Custom Loot System</h4>
+            <p>Enjoy balanced, custom loot cycles designed to maintain challenge while ensuring fair progression.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="join" class="server-stats">
+    <div class="container text-center">
+      <div class="fade-in">
+        <h2 class="section-heading mb-4">Ready to Survive?</h2>
+        <p class="lead mb-5">Join survivors in the ultimate PvE DayZ experience</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="steam://connect/129.146.31.206:2302" class="btn btn-primary-custom btn-lg">
+            <i class="fas fa-rocket me-2"></i>Launch Game
+          </a>
+          <a href="https://discord.gg/6xhGgwRBJb" target="_blank" class="btn btn-outline-custom btn-lg">
+            <i class="fab fa-discord me-2"></i>Join Community
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maps Section -->
+  <section id="maps" class="features">
+    <div class="container">
+      <h2 class="section-heading fade-in">Maps</h2>
+      <div class="row g-4">
+        
+        <!-- Banov -->
+        <div class="col-lg-6 col-md-6 fade-in">
+          <div class="glass-card h-100 text-center">
+            <img src="./images/banov.jpeg" alt="Banov Map" class="img-fluid rounded mb-3" 
+                 style="box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-height: 250px; object-fit: cover;">
+            <h4 class="mb-2">Banov</h4>
+            <p class="mb-0">Our current world. Rich terrain, custom AI encounters, and endless survival opportunities.</p>
+          </div>
+        </div>
+        
+        <!-- Takistan -->
+        <div class="col-lg-6 col-md-6 fade-in">
+          <div class="glass-card h-100 text-center">
+            <img src="./images/takistan.jpeg" alt="Takistan Map" class="img-fluid rounded mb-3" 
+                 style="box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-height: 250px; object-fit: cover; opacity: 0.7;">
+            <h4 class="mb-2">Takistan <span class="badge bg-danger">September 15th</span></h4>
+            <p class="mb-0">A challenging desert landscape arriving soon — prepare for extreme survival!</p>
+          </div>
+        </div>
+
+	<!-- Cherno -->
+        <div class="col-lg-6 col-md-6 fade-in">
+          <div class="glass-card h-100 text-center">
+            <img src="./images/cherno.jpg" alt="Cherno Map" class="img-fluid rounded mb-3" 
+                 style="box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-height: 250px; object-fit: cover; opacity: 0.7;">
+            <h4 class="mb-2">Chernarus <span class="badge bg-danger">September 28th</span></h4>
+            <p class="mb-0">Get a glimpse of nostalgia with our Chernarus map</p>
+          </div>
+        </div>
+
+	<!-- Lux -->
+        <div class="col-lg-6 col-md-6 fade-in">
+          <div class="glass-card h-100 text-center">
+            <img src="./images/lux.jpeg" alt="Lux Map" class="img-fluid rounded mb-3" 
+                 style="box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-height: 250px; object-fit: cover; opacity: 0.7;">
+            <h4 class="mb-2">Lux <span class="badge bg-danger">TBD</span></h4>
+            <p class="mb-0">Ever wondered what surviving the jungle would look like? Lux is for you!</p>
+          </div>
+        </div>	
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; 2025 Homestead PvE | Elite DayZ Community</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="social-links">
+            <a href="https://discord.gg/6xhGgwRBJb" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-steam"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Animated Particles
+    function createParticles() {
+      const particles = document.getElementById('particles');
+      const particleCount = 50;
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 20 + 's';
+        particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+        particles.appendChild(particle);
+      }
+    }
+    
+    // Scroll Animations
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.fade-in');
+      
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.classList.add('visible');
+        }
+      });
+    }
+    
+    // Animated Player Count
+    function animatePlayerCount() {
+      const counter = document.getElementById('playerCount');
+      const duration = 2000;
+      const increment = target / (duration / 16);
+      let current = 0;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        counter.textContent = Math.floor(current);
+      }, 16);
+    }
+    
+    // Navbar Background Change
+    function handleNavbarScroll() {
+      const navbar = document.querySelector('.navbar-custom');
+      if (window.scrollY > 100) {
+        navbar.style.background = 'rgba(12, 12, 12, 0.98)';
+      } else {
+        navbar.style.background = 'rgba(12, 12, 12, 0.95)';
+      }
+    }
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      createParticles();
+      animateOnScroll();
+      
+      // Delay player count animation
+      setTimeout(animatePlayerCount, 1000);
+    });
+    
+    window.addEventListener('scroll', function() {
+      animateOnScroll();
+      handleNavbarScroll();
+    });
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

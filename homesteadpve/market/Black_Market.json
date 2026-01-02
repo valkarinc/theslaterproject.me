@@ -1,0 +1,175 @@
+{
+	  "m_Version": 12,
+	  "DisplayName": "BLACKMARKET GUNS",
+	  "Icon": "Deliver",
+	  "Color": "FBFCFEFF",
+	  "IsExchange": 0,
+	  "InitStockPercent": 75.0,
+	  "Items": [
+		{
+		  "ClassName": "SNAFUKivaari_Black_GUN",
+		  "MaxPriceThreshold": 300000,
+		  "MinPriceThreshold": 300000,
+		  "SellPricePercent": 50,
+		  "MaxStockThreshold": 100,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": [
+			"SNAFUKivaari_Grey_GUN",
+			"SNAFUKivaari_Snow_GUN",
+			"SNAFUKivaari_Tan_GUN"
+		  ]
+		},
+		{
+		  "ClassName": "SNAFU_AWM_Gun",
+		  "MaxPriceThreshold": 300000,
+		  "MinPriceThreshold": 300000,
+		  "SellPricePercent": 50,
+		  "MaxStockThreshold": 100,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "SNAFUM98B_Atac_GUN",
+		  "MaxPriceThreshold": 300000,
+		  "MinPriceThreshold": 300000,
+		  "SellPricePercent": 50,
+		  "MaxStockThreshold": 100,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": [
+			"SNAFUM98B_Digi_GUN",
+			"SNAFUM98B_Ger_GUN",
+			"SNAFUM98B_Wood_GUN",
+			"SNAFUM98B_Snow_GUN",
+			"SNAFUM98B_Mc_GUN"
+		  ]
+		},
+		{
+		  "ClassName": "SNAFUT5000_Dkmcc_GUN",
+		  "MaxPriceThreshold": 300000,
+		  "MinPriceThreshold": 300000,
+		  "SellPricePercent": 50,
+		  "MaxStockThreshold": 100,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": [
+			"SNAFUT5000_Snow_GUN",
+			"SNAFUT5000_Wood_GUN"
+		  ]
+		},
+		{
+		  "ClassName": "SNAFU_AS50_GUN",
+		  "MaxPriceThreshold": 1000000,
+		  "MinPriceThreshold": 1000000,
+		  "SellPricePercent": 50,
+		  "MaxStockThreshold": 100,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "SNAFUGM6Lynx",
+		  "MaxPriceThreshold": 1000000,
+		  "MinPriceThreshold": 1000000,
+		  "SellPricePercent": 50,
+		  "MaxStockThreshold": 100,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "BC_ASH12",
+		  "MaxPriceThreshold": 1400000,
+		  "MinPriceThreshold": 1400000,
+		  "SellPricePercent": 45,
+		  "MaxStockThreshold": 100,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": ["BC_ASH12_Magazine"],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "BC_VSSK",
+		  "MaxPriceThreshold": 1000000,
+		  "MinPriceThreshold": 1000000,
+		  "SellPricePercent": 40,
+		  "MaxStockThreshold": 100,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": ["BC_VSSK_Magazine"],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "BC_MCXSPEAR_Black",
+		  "MaxPriceThreshold": 800000,
+		  "MinPriceThreshold": 800000,
+		  "SellPricePercent": 50,
+		  "MaxStockThreshold": 100,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": [
+			"BC_MCXSPEAR_Tan"
+		  ]
+		},
+		{
+		  "ClassName": "BC_AWP",
+		  "MaxPriceThreshold": 500000,
+		  "MinPriceThreshold": 500000,
+		  "SellPricePercent": 50,
+		  "MaxStockThreshold": 100,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": [
+			"BC_AWP_Asiimov",
+			"BC_AWP_Atheris",
+			"BC_AWP_DragonLore",
+			"BC_AWP_Gungnir",
+			"BC_AWP_HyperBeast",
+			"BC_AWP_Medusa",
+			"BC_AWP_NeoNoir",
+			"BC_AWP_OniTaiji",
+			"BC_AWP_Redline",
+			"BC_AWP_ThePrince",
+			"BC_AWP_Anime",
+			"BC_AWP_Cyrex",
+			"BC_AWP_DarkSmoke",
+			"BC_AWP_Dawning",
+			"BC_AWP_DeadlyBird",
+			"BC_AWP_DeadPool",
+			"BC_AWP_EletricHive",
+			"BC_AWP_EliteBuild",
+			"BC_AWP_Fade",
+			"BC_AWP_FeverDream",
+			"BC_AWP_GoldenPhoenix",
+			"BC_AWP_Graphite",
+			"BC_AWP_HellGate",
+			"BC_AWP_IceTitan",
+			"BC_AWP_LightningStrike",
+			"BC_AWP_Lilium",
+			"BC_AWP_Phobos",
+			"BC_AWP_RailGun",
+			"BC_AWP_RoyalDice",
+			"BC_AWP_SafariMesh",
+			"BC_AWP_StarKeeper",
+			"BC_AWP_Tactical",
+			"BC_AWP_TertRoner",
+			"BC_AWP_TokyoGhoul",
+			"BC_AWP_UltraJade",
+			"BC_AWP_Unicorn",
+			"BC_AWP_Vertex",
+			"BC_AWP_WormGod",
+			"BC_AWP_Xray"
+		  ]
+		}
+	  ]
+}

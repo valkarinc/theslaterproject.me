@@ -1,0 +1,120 @@
+{
+  "m_Version": 12,
+  "DisplayName": "Homestead Helmets",
+  "Icon": "Deliver",
+  "Color": "FBFCFEFF",
+  "IsExchange": 0,
+  "InitStockPercent": 75.0,
+  "Items": [
+    {
+      "ClassName": "Paragon_Killa_Black",
+      "MaxPriceThreshold": 200000,
+      "MinPriceThreshold": 200000,
+      "SellPricePercent": 80,
+      "MaxStockThreshold": 5,
+      "MinStockThreshold": 1,
+      "QuantityPercent": -1,
+      "SpawnAttachments": [],
+      "Variants": ["Paragon_Killa_Blue","Paragon_Killa_Green"]
+    },
+    {
+      "ClassName": "Paragon_Ballistic_H_Black",
+      "MaxPriceThreshold": 150000,
+      "MinPriceThreshold": 150000,
+      "SellPricePercent": 80,
+      "MaxStockThreshold": 5,
+      "MinStockThreshold": 1,
+      "QuantityPercent": -1,
+      "SpawnAttachments": ["Paragon_Ballistic_H_Blue","Paragon_Ballistic_H_Green"],
+      "Variants": []
+    },
+    {
+      "ClassName": "Paragon_Altyn_Black",
+      "MaxPriceThreshold": 125000,
+      "MinPriceThreshold": 125000,
+      "SellPricePercent": 80,
+      "MaxStockThreshold": 5,
+      "MinStockThreshold": 1,
+      "QuantityPercent": -1,
+      "SpawnAttachments": [],
+      "Variants": ["Paragon_Altyn_Blue","Paragon_Altyn_Green"]
+    },
+    {
+      "ClassName": "Paragon_Armored_H_Black",
+      "MaxPriceThreshold": 100000,
+      "MinPriceThreshold": 100000,
+      "SellPricePercent": 80,
+      "MaxStockThreshold": 5,
+      "MinStockThreshold": 1,
+      "QuantityPercent": -1,
+      "SpawnAttachments": [],
+      "Variants": ["Paragon_Armored_H_Blue","Paragon_Armored_H_Green"]
+    },
+    {
+      "ClassName": "Paragon_Space_Helmet_Black",
+      "MaxPriceThreshold": 90000,
+      "MinPriceThreshold": 90000,
+      "SellPricePercent": 80,
+      "MaxStockThreshold": 5,
+      "MinStockThreshold": 1,
+      "QuantityPercent": -1,
+      "SpawnAttachments": ["Paragon_Space_Helmet_Blue","Paragon_Space_Helmet_Green"],
+      "Variants": []
+    },
+    {
+      "ClassName": "Paragon_Maska_Black",
+      "MaxPriceThreshold": 80000,
+      "MinPriceThreshold": 80000,
+      "SellPricePercent": 80,
+      "MaxStockThreshold": 5,
+      "MinStockThreshold": 1,
+      "QuantityPercent": -1,
+      "SpawnAttachments": [],
+      "Variants": ["Paragon_Maska_Blue","Paragon_Maska_Green"]
+    },
+    {
+      "ClassName": "Paragon_Mando_Black",
+      "MaxPriceThreshold": 75000,
+      "MinPriceThreshold": 75000,
+      "SellPricePercent": 80,
+      "MaxStockThreshold": 5,
+      "MinStockThreshold": 1,
+      "QuantityPercent": -1,
+      "SpawnAttachments": [],
+      "Variants": ["Paragon_Mando_Blue","Paragon_Mando_Green"]
+    },
+    {
+      "ClassName": "Paragon_Scifi_H_Black",
+      "MaxPriceThreshold": 70000,
+      "MinPriceThreshold": 70000,
+      "SellPricePercent": 80,
+      "MaxStockThreshold": 5,
+      "MinStockThreshold": 1,
+      "QuantityPercent": -1,
+      "SpawnAttachments": [],
+      "Variants": ["Paragon_Scifi_H_Blue","Paragon_Scifi_H_Green"]
+    },
+    {
+      "ClassName": "Paragon_Combat_H_Black",
+      "MaxPriceThreshold": 60000,
+      "MinPriceThreshold": 60000,
+      "SellPricePercent": 80,
+      "MaxStockThreshold": 5,
+      "MinStockThreshold": 1,
+      "QuantityPercent": -1,
+      "SpawnAttachments": [],
+      "Variants": ["Paragon_Combat_H_Blue","Paragon_Combat_H_Green"]
+    },
+    {
+      "ClassName": "Paragon_Tac_H_Black",
+      "MaxPriceThreshold": 40000,
+      "MinPriceThreshold": 40000,
+      "SellPricePercent": 80,
+      "MaxStockThreshold": 5,
+      "MinStockThreshold": 1,
+      "QuantityPercent": -1,
+      "SpawnAttachments": [],
+      "Variants": ["Paragon_Tac_H_Blue","Paragon_Tac_H_Green","Paragon_Tac_H_Desert","Paragon_Tac_H_Navy","Paragon_Tac_H_Fatigue"]
+    }
+  ]
+}

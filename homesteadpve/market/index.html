@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homestead PVE Market</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1c1c1c;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    #searchBar {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+    }
+    .item {
+      background: #2b2b2b;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+    .item span {
+      font-weight: bold;
+      color: #66ccff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Homestead PVE Market</h1>
+  <input type="text" id="searchBar" placeholder="Search items...">
+
+  <div id="results"></div>
+
+  <script>
+    const resultsDiv = document.getElementById("results");
+    const searchBar = document.getElementById("searchBar");
+
+    // Load all JSON files in this directory
+    async function loadJSONFiles() {
+      const response = await fetch("list.json"); 
+      const files = await response.json(); // list.json must contain an array of all .json filenames
+      let allItems = [];
+
+      for (let file of files) {
+        try {
+          const res = await fetch(file);
+          const data = await res.json();
+          if (data.Categories) {
+            data.Categories.forEach(cat => {
+              if (cat.Items) {
+                cat.Items.forEach(item => {
+                  allItems.push({
+                    name: item.ClassName,
+                    category: cat.DisplayName || "Unknown",
+                    price: item.MaxPriceThreshold || "N/A"
+                  });
+                });
+              }
+            });
+          }
+        } catch (e) {
+          console.error("Error reading", file, e);
+        }
+      }
+
+      return allItems;
+    }
+
+    async function init() {
+      const items = await loadJSONFiles();
+
+      function displayItems(filter = "") {
+        resultsDiv.innerHTML = "";
+        let filtered = items.filter(item =>
+          item.name.toLowerCase().includes(filter.toLowerCase())
+        );
+        if (filtered.length === 0) {
+          resultsDiv.innerHTML = "<p>No results found.</p>";
+          return;
+        }
+        filtered.forEach(item => {
+          const div = document.createElement("div");
+          div.classList.add("item");
+          div.innerHTML = `<span>${item.name}</span> | Category: ${item.category} | Price: ${item.price}`;
+          resultsDiv.appendChild(div);
+        });
+      }
+
+      searchBar.addEventListener("input", e => {
+        displayItems(e.target.value);
+      });
+
+      displayItems();
+    }
+
+    init();
+  </script>
+</body>
+</html>

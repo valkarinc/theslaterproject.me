@@ -1,0 +1,156 @@
+{
+	  "m_Version": 12,
+	  "DisplayName": "BLACKMARKET ATTACHMENTS",
+	  "Icon": "Deliver",
+	  "Color": "FBFCFEFF",
+	  "IsExchange": 0,
+	  "InitStockPercent": 75.0,
+	  "Items": [
+		{
+		  "ClassName": "SNAFUKivaari_10rdMag",
+		  "MaxPriceThreshold": 40000,
+		  "MinPriceThreshold": 25000,
+		  "SellPricePercent": -1.0,
+		  "MaxStockThreshold": 6,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "SNAFUKivaari_25rdMag",
+		  "MaxPriceThreshold": 50000,
+		  "MinPriceThreshold": 30000,
+		  "SellPricePercent": -1.0,
+		  "MaxStockThreshold": 4,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "SNAFUKivaari_338_Supp",
+		  "MaxPriceThreshold": 100000,
+		  "MinPriceThreshold": 75000,
+		  "SellPricePercent": -1.0,
+		  "MaxStockThreshold": 2,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "SNAFU_AWM_Mag",
+		  "MaxPriceThreshold": 40000,
+		  "MinPriceThreshold": 25000,
+		  "SellPricePercent": -1.0,
+		  "MaxStockThreshold": 6,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "SNAFUM98B_Mag",
+		  "MaxPriceThreshold": 40000,
+		  "MinPriceThreshold": 25000,
+		  "SellPricePercent": -1.0,
+		  "MaxStockThreshold": 6,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "SNAFUT5000_Mag",
+		  "MaxPriceThreshold": 40000,
+		  "MinPriceThreshold": 25000,
+		  "SellPricePercent": -1.0,
+		  "MaxStockThreshold": 6,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "SNAFU_AS50_Mag",
+		  "MaxPriceThreshold": 50000,
+		  "MinPriceThreshold": 30000,
+		  "SellPricePercent": -1.0,
+		  "MaxStockThreshold": 4,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "SNAFU_AtlasBipod",
+		  "MaxPriceThreshold": 30000,
+		  "MinPriceThreshold": 15000,
+		  "SellPricePercent": -1.0,
+		  "MaxStockThreshold": 5,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "SNAFUGM6Lynx_5rdMag",
+		  "MaxPriceThreshold": 50000,
+		  "MinPriceThreshold": 30000,
+		  "SellPricePercent": -1.0,
+		  "MaxStockThreshold": 4,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "BC_ASH12_Magazine",
+		  "MaxPriceThreshold": 75000,
+		  "MinPriceThreshold": 40000,
+		  "SellPricePercent": -1.0,
+		  "MaxStockThreshold": 4,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "BC_VSSK_Magazine",
+		  "MaxPriceThreshold": 50000,
+		  "MinPriceThreshold": 30000,
+		  "SellPricePercent": -1.0,
+		  "MaxStockThreshold": 4,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "BC_MCXSPEAR_Magazine",
+		  "MaxPriceThreshold": 18000,
+		  "MinPriceThreshold": 14000,
+		  "SellPricePercent": -1.0,
+		  "MaxStockThreshold": 4,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": []
+		},
+		{
+		  "ClassName": "BC_50Cal_Suppressor",
+		  "MaxPriceThreshold": 180000,
+		  "MinPriceThreshold": 20000,
+		  "SellPricePercent": -1.0,
+		  "MaxStockThreshold": 2,
+		  "MinStockThreshold": 1,
+		  "QuantityPercent": -1,
+		  "SpawnAttachments": [],
+		  "Variants": [
+		  "BC_50Cal_Suppressor_2",
+		  "BC_50Cal_Suppressor_3"
+		]
+		}
+	  ]
+	}

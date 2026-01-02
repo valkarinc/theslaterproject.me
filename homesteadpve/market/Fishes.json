@@ -1,0 +1,20 @@
+{
+    "m_Version": 12,
+    "DisplayName": "Fish",
+    "Icon": "Deliver",
+    "Color": "FBFCFEFF",
+    "IsExchange": 0,
+    "InitStockPercent": 75.0,
+    "Items": [
+        { "ClassName": "Sardines", "MaxPriceThreshold": 500, "MinPriceThreshold": 500, "SellPricePercent": -1.0, "MaxStockThreshold": 1, "MinStockThreshold": 1, "QuantityPercent": -1, "SpawnAttachments": [], "Variants": [] },
+        { "ClassName": "Carp", "MaxPriceThreshold": 600, "MinPriceThreshold": 600, "SellPricePercent": -1.0, "MaxStockThreshold": 1, "MinStockThreshold": 1, "QuantityPercent": -1, "SpawnAttachments": [], "Variants": [] },
+        { "ClassName": "Mackerel", "MaxPriceThreshold": 600, "MinPriceThreshold": 600, "SellPricePercent": -1.0, "MaxStockThreshold": 1, "MinStockThreshold": 1, "QuantityPercent": -1, "SpawnAttachments": [], "Variants": [] },
+        { "ClassName": "geb_SignalCrayFish", "MaxPriceThreshold": 15000, "MinPriceThreshold": 15000, "SellPricePercent": -1.0, "MaxStockThreshold": 1, "MinStockThreshold": 1, "QuantityPercent": -1, "SpawnAttachments": [], "Variants": [] },
+        { "ClassName": "geb_EuropeanCrayFish", "MaxPriceThreshold": 12500, "MinPriceThreshold": 12500, "SellPricePercent": -1.0, "MaxStockThreshold": 1, "MinStockThreshold": 1, "QuantityPercent": -1, "SpawnAttachments": [], "Variants": [] },
+        { "ClassName": "geb_NorthernPike", "MaxPriceThreshold": 12500, "MinPriceThreshold": 12500, "SellPricePercent": -1.0, "MaxStockThreshold": 1, "MinStockThreshold": 1, "QuantityPercent": -1, "SpawnAttachments": [], "Variants": [] },
+        { "ClassName": "geb_LargeMouthBass", "MaxPriceThreshold": 4500, "MinPriceThreshold": 4500, "SellPricePercent": -1.0, "MaxStockThreshold": 1, "MinStockThreshold": 1, "QuantityPercent": -1, "SpawnAttachments": [], "Variants": [] },
+        { "ClassName": "geb_SmallMouthBass", "MaxPriceThreshold": 4000, "MinPriceThreshold": 4000, "SellPricePercent": -1.0, "MaxStockThreshold": 1, "MinStockThreshold": 1, "QuantityPercent": -1, "SpawnAttachments": [], "Variants": [] },
+        { "ClassName": "geb_SunFish", "MaxPriceThreshold": 20000, "MinPriceThreshold": 20000, "SellPricePercent": -1.0, "MaxStockThreshold": 1, "MinStockThreshold": 1, "QuantityPercent": -1, "SpawnAttachments": [], "Variants": [] },
+        { "ClassName": "geb_WallEye", "MaxPriceThreshold": 20000, "MinPriceThreshold": 20000, "SellPricePercent": -1.0, "MaxStockThreshold": 1, "MinStockThreshold": 1, "QuantityPercent": -1, "SpawnAttachments": [], "Variants": [] }
+    ]
+}

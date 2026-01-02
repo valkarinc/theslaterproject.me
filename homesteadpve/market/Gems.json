@@ -1,0 +1,98 @@
+{
+    "m_Version": 12,
+    "DisplayName": "Gems",
+    "Icon": "Deliver",
+    "Color": "FBFCFEFF",
+    "IsExchange": 0,
+    "InitStockPercent": 75.0,
+    "Items": [
+        {
+            "ClassName": "FreezeGem_Amber_Cut",
+            "MaxPriceThreshold": 4000,
+            "MinPriceThreshold": 4000,
+            "SellPricePercent": 100,
+            "MaxStockThreshold": 10,
+            "MinStockThreshold": 1,
+            "QuantityPercent": -1,
+            "SpawnAttachments": [],
+            "Variants": []
+        },
+        {
+            "ClassName": "FreezeGem_Amethyst_Cut",
+            "MaxPriceThreshold": 8000,
+            "MinPriceThreshold": 8000,
+            "SellPricePercent": 100,
+            "MaxStockThreshold": 10,
+            "MinStockThreshold": 1,
+            "QuantityPercent": -1,
+            "SpawnAttachments": [],
+            "Variants": []
+        },
+        {
+            "ClassName": "FreezeGem_Turquoise_Cut",
+            "MaxPriceThreshold": 12000,
+            "MinPriceThreshold": 12000,
+            "SellPricePercent": 100,
+            "MaxStockThreshold": 10,
+            "MinStockThreshold": 1,
+            "QuantityPercent": -1,
+            "SpawnAttachments": [],
+            "Variants": []
+        },
+        {
+            "ClassName": "FreezeGem_Jade_Cut",
+            "MaxPriceThreshold": 17000,
+            "MinPriceThreshold": 17000,
+            "SellPricePercent": 100,
+            "MaxStockThreshold": 10,
+            "MinStockThreshold": 1,
+            "QuantityPercent": -1,
+            "SpawnAttachments": [],
+            "Variants": []
+        },
+        {
+            "ClassName": "FreezeGem_Aquamarine_Cut",
+            "MaxPriceThreshold": 22000,
+            "MinPriceThreshold": 22000,
+            "SellPricePercent": 100,
+            "MaxStockThreshold": 10,
+            "MinStockThreshold": 1,
+            "QuantityPercent": -1,
+            "SpawnAttachments": [],
+            "Variants": []
+        },
+        {
+            "ClassName": "FreezeGem_Iolite_Cut",
+            "MaxPriceThreshold": 28000,
+            "MinPriceThreshold": 28000,
+            "SellPricePercent": 100,
+            "MaxStockThreshold": 10,
+            "MinStockThreshold": 1,
+            "QuantityPercent": -1,
+            "SpawnAttachments": [],
+            "Variants": []
+        },
+        {
+            "ClassName": "FreezeGem_Ruby_Cut",
+            "MaxPriceThreshold": 38000,
+            "MinPriceThreshold": 38000,
+            "SellPricePercent": 100,
+            "MaxStockThreshold": 5,
+            "MinStockThreshold": 1,
+            "QuantityPercent": -1,
+            "SpawnAttachments": [],
+            "Variants": []
+        },
+        {
+            "ClassName": "FreezeGem_FancyColourDiamond_Cut",
+            "MaxPriceThreshold": 80000,
+            "MinPriceThreshold": 80000,
+            "SellPricePercent": 100,
+            "MaxStockThreshold": 3,
+            "MinStockThreshold": 1,
+            "QuantityPercent": -1,
+            "SpawnAttachments": [],
+            "Variants": []
+        }
+    ]
+}
