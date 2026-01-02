@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Valkarinc</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --accent-blue: #58a6ff;
+            --text-main: #c9d1d9;
+            --text-dim: #8b949e;
+            --border-color: #30363d;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 20px;
+            background: rgba(13, 17, 23, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover { color: var(--accent-blue); }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--accent-blue);
+            display: inline-block;
+        }
+
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateX(10px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            margin: 0;
+        }
+
+        .project-meta {
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        .tag {
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--accent-blue);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-right: 5px;
+        }
+
+        .project-description {
+            margin: 15px 0;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            border: 1px solid var(--accent-blue);
+            color: var(--accent-blue);
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--accent-blue);
+            color: #0d1117;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">DASHBOARD</a>
+        <a href="projects.html" style="color: var(--accent-blue);">PROJECTS</a>
+        <a href="https://github.com/valkarinc">GITHUB</a>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">Technical Projects</h1>
+        <p style="color: var(--text-dim);">A collection of system architectures, Java applications, and IT solutions developed over the last decade.</p>
+
+        <div class="project-list">
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Legacy System Virtualization</h3>
+                    <span class="project-meta">2024 - Active</span>
+                </div>
+                <div>
+                    <span class="tag">Java</span>
+                    <span class="tag">Virtualization</span>
+                    <span class="tag">Network Config</span>
+                </div>
+                <p class="project-description">
+                    Configuring and maintaining private server environments with a focus on high-uptime and resource optimization. Managed complex database integrations and custom Java scripts for automated task handling.
+                </p>
+                <a href="https://github.com/valkarinc" class="btn-outline">View Repository</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">C# Interactive Systems</h3>
+                    <span class="project-meta">Unity Development</span>
+                </div>
+                <div>
+                    <span class="tag">C#</span>
+                    <span class="tag">Unity Engine</span>
+                    <span class="tag">OOP Design</span>
+                </div>
+                <p class="project-description">
+                    Developing modular interactive systems within the Unity engine. Focused on Object-Oriented Programming (OOP) principles to ensure scalable and reusable codebase for environment interactions.
+                </p>
+                <a href="https://github.com/valkarinc" class="btn-outline">Documentation</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Automated Environment Deployment</h3>
+                    <span class="project-meta">IT Operations</span>
+                </div>
+                <div>
+                    <span class="tag">Automation</span>
+                    <span class="tag">Environment Setup</span>
+                    <span class="tag">Documentation</span>
+                </div>
+                <p class="project-description">
+                    Streamlining the setup process for development environments. Utilizing scripts to automate repetitive configuration tasks, reducing setup time by roughly 40%.
+                </p>
+                <a href="https://github.com/valkarinc" class="btn-outline">Technical Specs</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Valkarinc | Built for Excellence
+    </footer>
+
+</body>
+</html>
